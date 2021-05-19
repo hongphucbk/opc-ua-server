@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "node-opcua": "^2.42.0"
+    "node-opcua": "^2.42.0",
+    "random": "^3.0.6"
   }
 }

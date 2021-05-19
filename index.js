@@ -1,4 +1,5 @@
 const opcua = require("node-opcua");
+const random = require('random')
 
 // Let's create an instance of OPCUAServer
 const server = new opcua.OPCUAServer({
@@ -30,7 +31,11 @@ function post_initialize() {
         let variable1 = 1;
         
         // emulate variable1 changing every 500 ms
-        setInterval(function(){  variable1+=1; }, 500);
+        setInterval(function(){  
+
+        	variable1 = random.int(100, 1000) // 72;
+
+        }, 2000);
         
         namespace.addVariable({
             componentOf: device,
